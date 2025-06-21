@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Tracking</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="image/logo.png" alt="Mera Monitor Logo" />
+        </div>
+        <span class="logo-text">Action View</span>
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="feature1.html">AI Time Intelligence</a>
+            <a href="feature2.html">Smart Activity Radar</a>
+            <a href="feature3.html">AutoSnapshot AI</a>
+            <a href="feature4.html">Productivity Pulse</a>
+            <a href="feature5.html">ShiftGenie</a>
+            <a href="feature6.html">RemoteReady Monitoring</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="solution1.html">Team Monitoring</a>
+            <a href="solution2.html">Workforce Productivity Optimization</a>
+            <a href="solution3.html">Remote Monitoring </a>
+            <a href="solution4.html">Time Tracking</a>
+          </div>
+        </div>
+
+        <a href="client.html">Clients</a>
+        <a href="price.html">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Explore And Learn</a>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <!-- <button class="start-btn">START FOR FREE</button> -->
+      </nav>
+    </header>
+    <!-- navbar -->
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <h1>Time Tracking</h1>
+        <p>
+          Comprehensive Time Management & Automated Work Hour Monitoring for
+          Enhanced Productivity
+        </p>
+        <button class="cta-button-sol" onclick="scrollToSection('features')">
+          Start Time Tracking
+        </button>
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2 class="section-title">Advanced Time Management Solutions</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>Intelligent Time Tracking</h3>
+            <p>
+              Automatically tracks work activities across apps and websites with
+              machine learning accuracy. Captures start/stop times, breaks, and
+              task switches—eliminating manual entry errors.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Project Time Allocation</h3>
+            <p>
+              Automatically categorizes time by project, client, and task with
+              custom tags and rules. Tracks budgets, milestones, deadlines, and
+              billable hours with real-time progress updates.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3>Goal-Based Time Management</h3>
+            <p>
+              Set daily, weekly, or monthly goals with visual progress, alerts,
+              and analytics. Includes focus time, break reminders, and work-life
+              balance metrics.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Multi-Device Synchronization</h3>
+            <p>
+              Track time seamlessly across all devices with real-time sync and
+              offline support. Works on all major platforms with cloud-based
+              storage.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Advanced Analytics & Reporting</h3>
+            <p>
+              Gain insights into productivity patterns with automated reports,
+              heat maps, and trend analysis for smarter workforce planning.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-mobile"></i></div>
+            <h3>Smart Notifications & Alerts</h3>
+            <p>
+              Smart alerts for breaks, deadlines, and overtime with AI tips for
+              productivity and wellness reminders to support healthy work
+              habits.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productivity Insights Section -->
+    <section class="productivity-insights">
+      <div class="container">
+        <div class="insights-container">
+          <div class="insights-content">
+            <h2>Precision Time Management</h2>
+            <ul class="insights-list">
+              <li>
+                <strong>Automated Clock-In/Out Systems:</strong> Biometric and
+                behavioral algorithms auto-record work hours, ensuring accurate,
+                error-free attendance tracking."
+              </li>
+              <li>
+                <strong>Comprehensive Break Time Monitoring:</strong> Tracks
+                break duration and patterns to ensure compliance and support
+                employee wellness.
+              </li>
+              <li>
+                <strong>Dynamic Overtime Calculation:</strong> Automatically
+                calculates overtime based on regional laws, multiple pay scales,
+                and special rules like holiday or weekend rates.
+              </li>
+              <li>
+                <strong>Client-Specific Billable Hours:</strong> Automatically
+                categorizes projects, tracks expenses, and syncs with client
+                billing for accurate invoicing and profitability insights.
+              </li>
+              <li>
+                <strong>Advanced Time Theft Prevention:</strong>Detects
+                irregularities like unauthorized breaks or time edits using
+                machine learning, while ensuring privacy and audit compliance.
+              </li>
+              <li>
+                <strong>Productivity Time Analysis:</strong> Analyzes active vs.
+                idle time, app usage, and efficiency, offering personalized tips
+                to boost productivity.
+              </li>
+            </ul>
+          </div>
+          <div class="productivity-image">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Productivity analytics dashboard"
+            />
+            <div class="image-caption">
+              Comprehensive time tracking analytics dashboard with real-time
+              insights
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="realtime-section">
+      <div class="container">
+        <h2 class="section-title">Time Analytics & Performance Insights</h2>
+        <div class="realtime-grid">
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Work Efficiency Rate</h3>
+
+            <p>
+              Average productivity score based on active work time, task
+              completion, and goal achievement metrics
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Time Tracking Accuracy</h3>
+
+            <p>
+              Precision rate of automated time detection and classification
+              across all tracked activities
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Goal Achievement</h3>
+
+            <p>
+              Percentage of daily and weekly productivity goals successfully
+              completed on schedule
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>35%</h3>
+            <p>Average Productivity Increase</p>
+          </div>
+          <div class="stat-item">
+            <h3>2.5hrs</h3>
+            <p>Daily Time Saved</p>
+          </div>
+          <div class="stat-item">
+            <h3>95%</h3>
+            <p>User Satisfaction Rate</p>
+          </div>
+          <div class="stat-item">
+            <h3>1000+</h3>
+            <p>Companies Optimized</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Transform Your Work Productivity</h2>
+        <p>
+          Join thousands of professionals using ActionView to optimize their
+          work performance and achieve better results.
+        </p>
+        <button class="cta-button-sol" onclick="startProductivity()">
+          Start Optimizing Today
+        </button>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <a href="index.html"
+              ><img
+                src="image/logo.png"
+                style="height: 80px; width: 100px" /></a
+            ><br /><br />
+            <p>Innovative monitoring solutions for the modern enterprise.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="feature1.html">AI Time Intelligence</a></li>
+              <li><a href="feature2.html">Smart Activity Radar</a></li>
+              <li><a href="feature3.html">AutoSnapshot AI</a></li>
+              <li><a href="feature4.html">Productivity Pulse</a></li>
+              <li><a href="feature5.html">ShiftGenie</a></li>
+              <li><a href="feature6.html">RemoteReady Monitoring</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>soutions</h3>
+            <ul>
+              <li><a href="solution1.html">Team Monitoring</a></li>
+              <li>
+                <a href="solution2.html">Workforce Productivity Optimization</a>
+              </li>
+              <li><a href="solution3.html">Remote Monitoring </a></li>
+              <li><a href="solution4.html">Time Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="client.html">Clients</a></li>
+              <li><a href="price.html">Price</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ActionView. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    s
+    <script src="solutions.js"></script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Monitoring - ActionView</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="image/logo.png" alt="Mera Monitor Logo" />
+        </div>
+        <span class="logo-text">Action View</span>
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="feature1.html">AI Time Intelligence</a>
+            <a href="feature2.html">Smart Activity Radar</a>
+            <a href="feature3.html">AutoSnapshot AI</a>
+            <a href="feature4.html">Productivity Pulse</a>
+            <a href="feature5.html">ShiftGenie</a>
+            <a href="feature6.html">RemoteReady Monitoring</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="solution1.html">Team Monitoring</a>
+            <a href="solution2.html">Workforce Productivity Optimization</a>
+            <a href="solution3.html">Remote Monitoring </a>
+            <a href="solution4.html">Time Tracking</a>
+          </div>
+        </div>
+
+        <a href="client.html">Clients</a>
+        <a href="price.html">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Explore And Learn</a>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <!-- <button class="start-btn">START FOR FREE</button> -->
+      </nav>
+    </header>
+    <!-- navbar -->
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <h1>Team Monitoring</h1>
+        <p>Complete Visibility & Control Over Your Remote and Office Teams</p>
+        <button class="cta-button-sol" onclick="scrollToSection('features')">
+          Explore Monitoring Features
+        </button>
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2 class="section-title">Comprehensive Team Oversight</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Screen Activity Monitoring</h3>
+            <p>
+              Real-time screen recording and screenshot capture to monitor
+              employee activities. Track application usage, website visits, and
+              active/idle time across all devices.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Attendance & Time Tracking</h3>
+            <p>
+              Automated attendance logging with precise time tracking. Monitor
+              login/logout times, break durations, and work patterns to ensure
+              accountability.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Activity Analysis</h3>
+            <p>
+              Detailed reports on employee activities including keystroke
+              monitoring, mouse movements, and application focus time. Identify
+              productive vs. non-productive hours.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-envelope"></i></div>
+            <h3>Communication Monitoring</h3>
+            <p>
+              Track email communications, instant messages, and file transfers.
+              Monitor internal and external communications while maintaining
+              compliance and security.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+            <h3>Alert & Notification System</h3>
+            <p>
+              Instant alerts for suspicious activities, policy violations, or
+              unusual behavior patterns. Customizable notifications for
+              different monitoring scenarios.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-mobile"></i></div>
+            <h3>Remote Access Control</h3>
+            <p>
+              Secure remote access to employee workstations for troubleshooting
+              and assistance. Control application access and website
+              restrictions remotely.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Monitoring Insights Section -->
+    <section class="monitoring-insights">
+      <div class="container">
+        <div class="insights-container">
+          <div class="insights-content">
+            <h2>Advanced Monitoring Capabilities</h2>
+            <ul class="insights-list">
+              <li>
+                <strong>Live Screen Monitoring:</strong> Real-time view of
+                employee screens with the ability to record and review sessions
+                for compliance and training.
+              </li>
+              <li>
+                <strong>Keystroke & Mouse Tracking:</strong> Detailed logging of
+                user interactions to understand work patterns and identify
+                potential security risks.
+              </li>
+              <li>
+                <strong>Application Usage Analytics:</strong> Track which
+                applications are used most frequently and identify unauthorized
+                software installations.
+              </li>
+              <li>
+                <strong>Web Activity Monitoring:</strong> Monitor website
+                visits, social media usage, and block access to non-work-related
+                sites during work hours.
+              </li>
+              <li>
+                <strong>File Activity Tracking:</strong> Monitor file access,
+                modifications, transfers, and USB device usage to prevent data
+                breaches.
+              </li>
+              <li>
+                <strong>Geolocation Tracking:</strong> Track employee location
+                for field workers and ensure compliance with work-from-home
+                policies.
+              </li>
+            </ul>
+          </div>
+          <div class="productivity-image">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Team collaboration and monitoring dashboard"
+            />
+            <div class="image-caption">
+              Modern team monitoring dashboard providing complete oversight
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-time Monitoring -->
+    <section class="realtime-section">
+      <div class="container">
+        <h2 class="section-title">⚡ Live Monitoring Alerts</h2>
+        <div class="realtime-grid">
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Unauthorized Access</h3>
+            <p>
+              Employee attempting to access restricted files. Immediate
+              intervention required to maintain security protocols.
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Extended Break Time</h3>
+            <p>
+              Team member has been inactive for 45 minutes. Automated reminder
+              sent and supervisor notified for follow-up.
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Productivity Peak</h3>
+            <p>
+              Development team showing 95% productivity rate. Current session
+              being recorded for best practice analysis.
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Policy Violation</h3>
+            <p>
+              Non-work website access detected during core hours. Warning issued
+              and activity logged for review.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Continuous Monitoring</p>
+          </div>
+          <div class="stat-item">
+            <h3>500+</h3>
+            <p>Teams Successfully Monitored</p>
+          </div>
+          <div class="stat-item">
+            <h3>99.9%</h3>
+            <p>System Uptime Reliability</p>
+          </div>
+          <div class="stat-item">
+            <h3>45%</h3>
+            <p>Reduction in Security Incidents</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Secure Your Team Today</h2>
+        <p>
+          Join thousands of organizations using ActionView to maintain complete
+          visibility and control over their workforce activities.
+        </p>
+        <button class="cta-button-sol" onclick="startMonitoring()">
+          Start Team Monitoring
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <a href="index.html"
+              ><img
+                src="image/logo.png"
+                style="height: 80px; width: 100px" /></a
+            ><br /><br />
+            <p>Innovative monitoring solutions for the modern enterprise.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="feature1.html">AI Time Intelligence</a></li>
+              <li><a href="feature2.html">Smart Activity Radar</a></li>
+              <li><a href="feature3.html">AutoSnapshot AI</a></li>
+              <li><a href="feature4.html">Productivity Pulse</a></li>
+              <li><a href="feature5.html">ShiftGenie</a></li>
+              <li><a href="feature6.html">RemoteReady Monitoring</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>soutions</h3>
+            <ul>
+              <li><a href="solution1.html">Team Monitoring</a></li>
+              <li>
+                <a href="solution2.html">Workforce Productivity Optimization</a>
+              </li>
+              <li><a href="solution3.html">Remote Monitoring </a></li>
+              <li><a href="solution4.html">Time Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="client.html">Clients</a></li>
+              <li><a href="price.html">Price</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ActionView. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="solutions.js"></script>
+  </body>
+</html>

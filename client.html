@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Clients - Green Theme</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary: #98cd00;
+        --primary-dark: #5a8f00;
+        --secondary: #7ab800;
+        --dark: #1a2e05;
+        --light: #f8fff0;
+        --accent: #c1ff72;
+        --gray: #6b7d5e;
+        --light-gray: #e9f5d8;
+        --card-shadow: 0 10px 30px rgba(152, 205, 0, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .logo {
+        font-size: 16px;
+        color: var(--primary-dark);
+        text-decoration: none;
+      }
+
+      .hero {
+        padding: 80px 0;
+        text-align: center;
+        background-color: white;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: var(--primary-dark);
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: var(--gray);
+        max-width: 700px;
+        margin: 0 auto 40px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+        color: var(--primary-dark);
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: var(--gray);
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .clients-section {
+        padding: 80px 0;
+      }
+
+      .client-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .client-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.3s, box-shadow 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        min-height: 150px;
+      }
+
+      .client-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(152, 205, 0, 0.2);
+      }
+
+      .client-logo {
+        max-width: 120px;
+        max-height: 60px;
+        object-fit: contain;
+        opacity: 0.8;
+        transition: all 0.3s;
+      }
+
+      .client-card:hover .client-logo {
+        opacity: 1;
+      }
+
+      .testimonials {
+        padding: 80px 0;
+        background-color: var(--light-gray);
+      }
+
+      .testimonial-carousel {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        gap: 30px;
+        padding: 20px 20px 30px;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: var(--gray) var(--light-gray);
+      }
+
+      .testimonial-carousel::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .testimonial-carousel::-webkit-scrollbar-track {
+        background: var(--light-gray);
+        border-radius: 10px;
+      }
+
+      .testimonial-carousel::-webkit-scrollbar-thumb {
+        background-color: var(--gray);
+        border-radius: 10px;
+      }
+
+      .testimonial-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 28px;
+        width: 320px;
+        box-shadow: var(--card-shadow);
+        flex-shrink: 0;
+        scroll-snap-align: start;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: var(--dark);
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+      }
+
+      .author-img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 12px;
+      }
+
+      .author-info h4 {
+        color: var(--primary-dark);
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+
+      .author-info p {
+        color: var(--gray);
+        font-size: 13px;
+      }
+
+      .cta-section {
+        padding: 80px 0;
+        text-align: center;
+        background-color: #064a06;
+        color: white;
+      }
+
+      .cta-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .cta-section p {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        font-size: 18px;
+      }
+
+      .btn-light {
+        background-color: white;
+        color: var(--primary-dark);
+      }
+
+      .btn-light:hover {
+        background-color: var(--light);
+        color: var(--primary-dark);
+      }
+
+      /* Tablet View */
+      @media (max-width: 1024px) {
+        .client-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 15px;
+        }
+
+        .client-card {
+          background-color: transparent;
+          box-shadow: none;
+          padding: 15px;
+          min-height: auto;
+        }
+
+        .client-logo {
+          max-width: 80px;
+          max-height: 40px;
+          opacity: 0.9;
+        }
+
+        .client-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+      }
+
+      /* Mobile View */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 36px;
+        }
+
+        .section-title h2 {
+          font-size: 30px;
+        }
+
+        .testimonial-card {
+          width: 300px;
+        }
+
+        .client-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+
+        .client-logo {
+          max-width: 70px;
+          max-height: 35px;
+        }
+      }
+
+      /* Small Mobile View */
+      @media (max-width: 480px) {
+        .client-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+
+        .client-logo {
+          max-width: 60px;
+          max-height: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="image/logo.png" alt="Mera Monitor Logo" />
+        </div>
+        <span class="logo-text">Action View</span>
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="feature1.html">AI Time Intelligence</a>
+            <a href="feature2.html">Smart Activity Radar</a>
+            <a href="feature3.html">AutoSnapshot AI</a>
+            <a href="feature4.html">Productivity Pulse</a>
+            <a href="feature5.html">ShiftGenie</a>
+            <a href="feature6.html">RemoteReady Monitoring</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="solution1.html">Team Monitoring</a>
+            <a href="solution2.html">Workforce Productivity Optimization</a>
+            <a href="solution3.html">Remote Monitoring </a>
+            <a href="solution4.html">Time Tracking</a>
+          </div>
+        </div>
+
+        <a href="client.html">Clients</a>
+        <a href="price.html">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Explore And Learn</a>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <!-- <button class="start-btn">START FOR FREE</button> -->
+      </nav>
+    </header>
+    <!-- navbar -->
+    <section class="hero">
+      <div class="container">
+        <h1>Our Valued Clients</h1>
+        <p>
+          We partner with industry leaders and innovative startups to deliver
+          exceptional monitoring solutions that drive business success.
+        </p>
+        <a href="#" class="btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="clients-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Trusted By Industry Leaders</h2>
+          <p>
+            Our monitoring solutions power businesses across various sectors,
+            helping them achieve operational excellence and customer
+            satisfaction.
+          </p>
+        </div>
+
+        <div class="client-grid">
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/google.com"
+              alt="Google"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/microsoft.com"
+              alt="Microsoft"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/amazon.com"
+              alt="Amazon"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/ibm.com"
+              alt="IBM"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/spotify.com"
+              alt="Spotify"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/airbnb.com"
+              alt="Airbnb"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/netflix.com"
+              alt="Netflix"
+              class="client-logo"
+            />
+          </div>
+          <div class="client-card">
+            <img
+              src="https://logo.clearbit.com/zoom.us"
+              alt="Zoom"
+              class="client-logo"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>What Our Clients Say</h2>
+          <p>
+            Hear from some of our satisfied clients about their experience
+            working with our team and using our solutions.
+          </p>
+        </div>
+
+        <div class="testimonial-carousel">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The monitoring solution provided by MeraMonitor has transformed
+              our operations. We've seen a 40% improvement in response times and
+              significant cost savings."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Author"
+                class="author-img"
+              />
+              <div class="author-info">
+                <h4>Sarah Johnson</h4>
+                <p>CTO, TechCorp</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Their team's expertise and responsiveness are unmatched. The
+              custom solution they built for us has given us a competitive edge
+              in our market."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/45.jpg"
+                alt="Author"
+                class="author-img"
+              />
+              <div class="author-info">
+                <h4>Michael Chen</h4>
+                <p>Operations Director, GlobalBank</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "From implementation to ongoing support, MeraMonitor has been a
+              true partner. Their solution scales perfectly with our growing
+              business needs."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Author"
+                class="author-img"
+              />
+              <div class="author-info">
+                <h4>Priya Patel</h4>
+                <p>VP of Engineering, HealthPlus</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "The dashboard and reporting features alone have made this worth
+              the investment. We can now make data-driven decisions with
+              confidence."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/22.jpg"
+                alt="Author"
+                class="author-img"
+              />
+              <div class="author-info">
+                <h4>David Wilson</h4>
+                <p>IT Manager, RetailChain</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Excellent customer support and a product that just works. We've
+              reduced our downtime by over 75% since implementation."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/54.jpg"
+                alt="Author"
+                class="author-img"
+              />
+              <div class="author-info">
+                <h4>Emily Rodriguez</h4>
+                <p>Director of Operations, FinServe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Transform Your Monitoring?</h2>
+        <p>
+          Join hundreds of businesses that trust MeraMonitor for their critical
+          monitoring needs. Let's discuss how we can help you achieve your
+          goals.
+        </p>
+        <a href="#" class="btn btn-light">Schedule a Demo</a>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <a href="index.html"
+              ><img
+                src="image/logo.png"
+                style="height: 80px; width: 100px" /></a
+            ><br /><br />
+            <p>Innovative monitoring solutions for the modern enterprise.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="feature1.html">AI Time Intelligence</a></li>
+              <li><a href="feature2.html">Smart Activity Radar</a></li>
+              <li><a href="feature3.html">AutoSnapshot AI</a></li>
+              <li><a href="feature4.html">Productivity Pulse</a></li>
+              <li><a href="feature5.html">ShiftGenie</a></li>
+              <li><a href="feature6.html">RemoteReady Monitoring</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>soutions</h3>
+            <ul>
+              <li><a href="solution1.html">Team Monitoring</a></li>
+              <li>
+                <a href="solution2.html">Workforce Productivity Optimization</a>
+              </li>
+              <li><a href="solution3.html">Remote Monitoring </a></li>
+              <li><a href="solution4.html">Time Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="client.html">Clients</a></li>
+              <li><a href="price.html">Price</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ActionView. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

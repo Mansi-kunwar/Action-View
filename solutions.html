@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --primary: #98cd00; /* Vibrant green */
+        --primary-dark: #5a8f00; /* Dark green for contrast */
+        --accent: #c1ff72; /* Light accent green */
+        --light: #f8fff0; /* Very light green background */
+        --dark: #1a2e05; /* Very dark green for text */
+        --gray: #6b7d5e; /* Muted green-gray */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Banner Styles */
+      .banner {
+        width: 100%;
+        height: 400px;
+        background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 60px;
+      }
+
+      .banner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .banner-content {
+        text-align: center;
+        color: white;
+        z-index: 1;
+        padding: 0 20px;
+        max-width: 800px;
+      }
+
+      .banner h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .banner p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary);
+        color: var(--dark);
+        padding: 12px 30px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: var(--primary-dark);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      /* Features Section */
+      .features {
+        padding: 0 0 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .feature-box {
+        background: white;
+        border-radius: 10px;
+        padding: 50px 40px;
+        box-shadow: 0 10px 30px rgba(152, 205, 0, 0.1);
+        transition: all 0.3s ease;
+        border-top: 5px solid var(--primary);
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .feature-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(152, 205, 0, 0.2);
+      }
+
+      .feature-box h2 {
+        font-size: 1.8rem;
+        color: var(--primary-dark);
+        margin-bottom: 25px;
+        font-weight: 700;
+      }
+
+      .feature-box p {
+        color: var(--gray);
+        margin-bottom: 30px;
+        line-height: 1.7;
+        font-size: 1.1rem;
+        flex-grow: 1;
+      }
+
+      .feature-link {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: inline-flex;
+        align-items: center;
+        margin-top: auto;
+      }
+
+      .feature-link:hover {
+        color: var(--primary-dark);
+      }
+
+      .feature-link::after {
+        content: "→";
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-link:hover::after {
+        transform: translateX(5px);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .banner {
+          height: 300px;
+          margin-bottom: 40px;
+        }
+
+        .banner h1 {
+          font-size: 2.2rem;
+        }
+
+        .banner p {
+          font-size: 1rem;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .feature-box {
+          padding: 40px 30px;
+          min-height: 300px;
+        }
+
+        .feature-box h2 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="image/logo.png" alt="Mera Monitor Logo" />
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <div class="dropdown">
+          <a href="#">Company</a>
+          <div class="dropdown-content">
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="#">Dashboard</a>
+            <a href="#">Monitoring</a>
+            <a href="#">Reports</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="#">Remote Teams</a>
+            <a href="#">Agencies</a>
+            <a href="#">Enterprise</a>
+          </div>
+        </div>
+
+        <a href="#">Clients</a>
+        <a href="#">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Resources</a>
+          <div class="dropdown-content">
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">Guides</a>
+          </div>
+        </div>
+
+        <a href="#" class="login">Login</a>
+        <button class="start-btn">START FOR FREE</button>
+      </nav>
+    </header>
+    <!-- navbar -->
+    <!-- Banner Section -->
+    <div class="banner">
+      <div class="banner-content">
+        <h1>Business Solutions</h1>
+        <p>
+          Innovative approaches to drive your business forward in the digital
+          age
+        </p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container">
+      <div class="features">
+        <!-- Feature 1 -->
+        <div class="feature-box">
+          <h2>Security Focus</h2>
+          <p>
+            We implement robust security measures to protect your valuable data
+            and assets with enterprise-grade encryption and continuous
+            monitoring.
+          </p>
+          <a href="#" class="feature-link">Learn more</a>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-box">
+          <h2>Growth Strategy</h2>
+          <p>
+            Our data-driven approach identifies opportunities to scale your
+            business effectively through market analysis and predictive
+            modeling.
+          </p>
+          <a href="#" class="feature-link">Learn more</a>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-box">
+          <h2>Efficiency Optimization</h2>
+          <p>
+            We streamline processes to maximize productivity and reduce
+            operational costs through automation and workflow analysis.
+          </p>
+          <a href="#" class="feature-link">Learn more</a>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-box">
+          <h2>Cloud Integration</h2>
+          <p>
+            Our cloud solutions provide flexibility, scalability, and
+            accessibility for your business with seamless migration support.
+          </p>
+          <a href="#" class="feature-link">Learn more</a>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-box">
+          <h2>Data Analytics</h2>
+          <p>
+            Transform raw data into actionable insights with our powerful
+            analytics platform and visualization tools.
+          </p>
+          <a href="#" class="feature-link">Learn more</a>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-box">
+          <h2>24/7 Support</h2>
+          <p>
+            Our dedicated support team is available around the clock to ensure
+            your business operations run smoothly.
+          </p>
+          <a href="#" class="feature-link">Learn more</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

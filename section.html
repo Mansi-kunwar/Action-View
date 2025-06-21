@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Productivity Tracking</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #111;
+      }
+
+      .hero {
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #f7fff0, #ffffff);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 40px;
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 320px;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #2e2e2e;
+      }
+
+      .hero-text p {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 20px;
+      }
+
+      .features {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 30px;
+        color: #555;
+      }
+
+      .cta-button {
+        background-color: #98cd00;
+        color: white;
+        padding: 14px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: background 0.3s ease;
+        display: inline-block;
+      }
+
+      .cta-button:hover {
+        background-color: #7fb700;
+      }
+
+      .small-text {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 300px;
+        text-align: center;
+      }
+
+      .hero-image img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-content {
+          flex-direction: column-reverse;
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 2rem;
+        }
+
+        .cta-button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="image/logo.png" alt="Mera Monitor Logo" />
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <div class="dropdown">
+          <a href="#">Company</a>
+          <div class="dropdown-content">
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="#">Dashboard</a>
+            <a href="#">Monitoring</a>
+            <a href="#">Reports</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="#">Remote Teams</a>
+            <a href="#">Agencies</a>
+            <a href="#">Enterprise</a>
+          </div>
+        </div>
+
+        <a href="#">Clients</a>
+        <a href="#">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Resources</a>
+          <div class="dropdown-content">
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">Guides</a>
+          </div>
+        </div>
+
+        <a href="#" class="login">Login</a>
+        <button class="start-btn">START FOR FREE</button>
+      </nav>
+    </header>
+    <!-- navbar -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Employee Productivity<br />Tracking Software</h1>
+          <p>
+            Unlock Your Team's Potential with Our Advanced Employee Productivity
+            Tracking Software!
+          </p>
+          <div class="features">
+            <span>Monitor Activities</span> | <span>Optimize Tasks</span> |
+            <span>Foster Growth</span>
+          </div>
+          <a href="#" class="cta-button">Start 14 Days Free Trial</a>
+          <p class="small-text">No credit card required</p>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://img.freepik.com/free-vector/flat-illustration-customer-support_23-2148887720.jpg"
+            alt="Productivity Illustration"
+          />
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

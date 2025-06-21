@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | MeraMonitor by AAPNA Infotech</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        color: var(--light);
+        text-align: center;
+        padding: 120px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.03)" points="0,100 100,0 100,100"/></svg>');
+        background-size: cover;
+        opacity: 0.5;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        position: relative;
+        animation: fadeInUp 1s ease;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        opacity: 0.9;
+        position: relative;
+        animation: fadeInUp 1s ease 0.2s forwards;
+        opacity: 0;
+      }
+
+      /* About Section */
+      .about {
+        padding: 100px 0;
+        background-color: var(--light);
+      }
+
+      .about-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .about-text {
+        flex: 1;
+      }
+
+      .about-image {
+        flex: 1;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transform: perspective(1000px) rotateY(-10deg);
+        transition: transform 0.5s ease;
+      }
+
+      .about-image:hover {
+        transform: perspective(1000px) rotateY(0deg);
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .about-image:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Association Section */
+      .association {
+        padding: 100px 0;
+        background-color: var(--light);
+      }
+
+      .association-content {
+        background: var(--light-gray);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: var(--card-shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .association-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--primary);
+        transition: width 0.4s ease;
+        z-index: 0;
+      }
+
+      .association-content:hover::before {
+        width: 100%;
+        opacity: 0.1;
+      }
+
+      .association-logo {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+
+      /* Inception Section */
+      .inception {
+        padding: 100px 0;
+        background-color: var(--light);
+      }
+
+      .inception-content {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .inception-image {
+        flex: 1;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+      }
+
+      .inception-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .inception-text {
+        flex: 1;
+      }
+
+      /* Values Section */
+      .values {
+        padding: 100px 0;
+
+        color: var(--light);
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .value-item {
+        background: rgba(106, 215, 11, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(1, 28, 1, 0.2);
+        transition: all 0.4s ease;
+        color: rgb(25, 47, 29);
+      }
+
+      .value-item:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .value-item i {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: rgb(25, 47, 29);
+      }
+
+      .value-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        color: #040404;
+      }
+
+      /* Stats Section */
+      .stats {
+        padding: 80px 0;
+        background-color: var(--light);
+      }
+
+      .stats-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 30px;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 10px;
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .stat-label {
+        font-size: 1.2rem;
+        color: var(--dark);
+        font-weight: 500;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gray);
+        border-radius: 2px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--dark);
+        max-width: 700px;
+        margin: 0 auto 50px;
+      }
+
+      .btn {
+        display: inline-block;
+        background: var(--primary);
+        color: var(--light);
+        padding: 12px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        border: 2px solid var(--light);
+      }
+
+      .btn:hover {
+        background: transparent;
+        color: var(--primary-dark);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .about-content,
+        .inception-content {
+          flex-direction: column;
+        }
+        .about-image,
+        .inception-image {
+          order: -1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+      }
+
+      /* Mission/Vision */
+      .mission-vision-section {
+        padding: 100px 0;
+        background-color: var(--light);
+      }
+
+      .mission-vision {
+        display: flex;
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .mv-card {
+        flex: 1;
+        background: var(--light-gray);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .mv-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--primary);
+        transition: width 0.4s ease;
+        z-index: -1;
+      }
+
+      .mv-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .mv-card:hover::before {
+        width: 100%;
+        opacity: 0.1;
+      }
+
+      .mv-card i {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 20px;
+      }
+
+      .mv-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: var(--dark);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-title {
+          font-size: 2.2rem;
+        }
+
+        /* STACK MISSION & VISION BOXES ON MOBILE */
+        .mission-vision {
+          flex-direction: column;
+        }
+
+        .mv-card {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="image/logo.png" alt="Mera Monitor Logo" />
+        </div>
+        <span class="logo-text">Action View</span>
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="feature1.html">AI Time Intelligence</a>
+            <a href="feature2.html">Smart Activity Radar</a>
+            <a href="feature3.html">AutoSnapshot AI</a>
+            <a href="feature4.html">Productivity Pulse</a>
+            <a href="feature5.html">ShiftGenie</a>
+            <a href="feature6.html">RemoteReady Monitoring</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="solution1.html">Team Monitoring</a>
+            <a href="solution2.html">Workforce Productivity Optimization</a>
+            <a href="solution3.html">Remote Monitoring </a>
+            <a href="solution4.html">Time Tracking</a>
+          </div>
+        </div>
+
+        <a href="client.html">Clients</a>
+        <a href="price.html">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Explore And Learn</a>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <!-- <button class="start-btn">START FOR FREE</button> -->
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <section class="hero">
+      <div class="container">
+        <h1>About MeraMonitor</h1>
+        <p>
+          AI-powered productivity monitoring solution developed by AAPNA
+          Infotech
+        </p>
+      </div>
+    </section>
+
+    <section class="mission-vision-section">
+      <div class="container">
+        <h2 class="section-title">Our Purpose</h2>
+        <p class="section-subtitle">
+          Driven by a clear mission and an ambitious vision for the future
+        </p>
+        <div class="mission-vision">
+          <div class="mv-card">
+            <i class="fas fa-bullseye"></i>
+            <h3>Our Mission</h3>
+            <p>
+              To empower businesses and individuals through cutting-edge
+              technology solutions that drive measurable results, foster
+              innovation, and create lasting value in an increasingly digital
+              world.
+            </p>
+          </div>
+          <div class="mv-card">
+            <i class="fas fa-binoculars"></i>
+            <h3>Our Vision</h3>
+            <p>
+              To redefine industry standards by developing transformative
+              solutions that anticipate future needs while maintaining our core
+              values of integrity, excellence, and social responsibility.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="association">
+      <div class="container">
+        <h2 class="section-title">Our Association with AAPNA Infotech</h2>
+        <div class="mv-card">
+          <!--<img src="https://www.aapnainfotech.com/wp-content/uploads/2023/03/logo.svg" alt="AAPNA Infotech Logo" class="association-logo"/>-->
+          <p>
+            MeraMonitor is proudly developed by AAPNA Infotech, a CMMi Level 3,
+            boutique software development and enterprise services organization
+            established in 2007. With over 15 years of experience, we have
+            evolved into an IT Commando Unit dedicated to delivering custom
+            software development and exceptional customer service.
+          </p>
+          <p>
+            Our commitment is driven by our unwavering passion, cost-effective
+            technology solutions, zero-waste methodology, and an outstanding
+            organizational culture.
+          </p>
+          <p>
+            For more information about AAPNA Infotech and our wide range of
+            Products & services, please visit our official website at
+            <a href="https://www.aapnainfotech.com" target="_blank"
+              >www.aapnainfotech.com</a
+            >.
+          </p>
+          <a href="https://www.aapnainfotech.com" target="_blank" class="btn"
+            >Visit AAPNA Infotech</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="inception">
+      <div class="container">
+        <h2 class="section-title">Our Inception</h2>
+        <div class="inception-content">
+          <div class="inception-text">
+            <p>
+              "MeraMonitor," the brainchild of AAPNA Infotech, was born out of
+              the necessity imposed by the COVID-19 pandemic. With the world
+              shifting towards remote work, our visionary CEO, Abhijit Roy,
+              recognized the need for a tool to ensure the productivity and
+              efficiency of remote teams.
+            </p>
+            <p>
+              After evaluating existing time tracking software, which often
+              proved costly and fell short of our expectations, our skilled IT
+              Commando team embarked on a journey to develop a superior
+              application.
+            </p>
+            <p>
+              Today, we proudly announce that "MeraMonitor" is LIVE. This
+              AI-driven tool, shaped by the dedication of over 200 Commandos and
+              valued partners, surpasses all competition. Its name,
+              "MeraMonitor," reflects its dual commitment to enhancing both
+              employee and organizational productivity.
+            </p>
+            <p>
+              As we continue to navigate the evolving landscape of work,
+              "MeraMonitor" stands as a testament to innovation and
+              adaptability.
+            </p>
+          </div>
+          <div class="inception-image">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Remote work team"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="container">
+        <h2 class="section-title">Our Core Values</h2>
+        <p class="section-subtitle">
+          The principles that guide everything we do
+        </p>
+        <div class="values-grid">
+          <div class="value-item">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Innovation</h3>
+            <p>
+              We challenge conventional thinking to develop groundbreaking
+              productivity solutions.
+            </p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Integrity</h3>
+            <p>
+              We build trust through transparent monitoring practices and
+              ethical standards.
+            </p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-users"></i>
+            <h3>Collaboration</h3>
+            <p>
+              We believe in teamwork between organizations and their employees.
+            </p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-chart-line"></i>
+            <h3>Productivity</h3>
+            <p>
+              We're committed to enhancing work efficiency through smart
+              monitoring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <h2 class="section-title">MeraMonitor By Numbers</h2>
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Years of IT Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">IT Commandos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">CMMi3</div>
+            <div class="stat-label">Certified</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">AI</div>
+            <div class="stat-label">Powered</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <a href="index.html"
+              ><img
+                src="image/logo.png"
+                style="height: 80px; width: 100px" /></a
+            ><br /><br />
+            <p>Innovative monitoring solutions for the modern enterprise.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="feature1.html">AI Time Intelligence</a></li>
+              <li><a href="feature2.html">Smart Activity Radar</a></li>
+              <li><a href="feature3.html">AutoSnapshot AI</a></li>
+              <li><a href="feature4.html">Productivity Pulse</a></li>
+              <li><a href="feature5.html">ShiftGenie</a></li>
+              <li><a href="feature6.html">RemoteReady Monitoring</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>soutions</h3>
+            <ul>
+              <li><a href="solution1.html">Team Monitoring</a></li>
+              <li>
+                <a href="solution2.html">Workforce Productivity Optimization</a>
+              </li>
+              <li><a href="solution3.html">Remote Monitoring </a></li>
+              <li><a href="solution4.html">Time Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="client.html">Clients</a></li>
+              <li><a href="price.html">Price</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ActionView. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleNav() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

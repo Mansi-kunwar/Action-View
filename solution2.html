@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workforce Productivity Optimization - ActionView</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="image/logo.png" alt="Mera Monitor Logo" />
+        </div>
+        <span class="logo-text">Action View</span>
+      </div>
+
+      <div class="hamburger" onclick="toggleNav()">☰</div>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Features</a>
+          <div class="dropdown-content">
+            <a href="feature1.html">AI Time Intelligence</a>
+            <a href="feature2.html">Smart Activity Radar</a>
+            <a href="feature3.html">AutoSnapshot AI</a>
+            <a href="feature4.html">Productivity Pulse</a>
+            <a href="feature5.html">ShiftGenie</a>
+            <a href="feature6.html">RemoteReady Monitoring</a>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <a href="#">Solutions</a>
+          <div class="dropdown-content">
+            <a href="solution1.html">Team Monitoring</a>
+            <a href="solution2.html">Workforce Productivity Optimization</a>
+            <a href="solution3.html">Remote Monitoring </a>
+            <a href="solution4.html">Time Tracking</a>
+          </div>
+        </div>
+
+        <a href="client.html">Clients</a>
+        <a href="price.html">Pricing</a>
+
+        <div class="dropdown">
+          <a href="#">Explore And Learn</a>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <!-- <button class="start-btn">START FOR FREE</button> -->
+      </nav>
+    </header>
+    <!-- navbar -->
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <h1>Workforce Productivity Optimization</h1>
+        <p>AI-Powered Insights for Maximum Employee Efficiency</p>
+        <button class="cta-button-sol" onclick="scrollToSection('features')">
+          Explore AI Features
+        </button>
+      </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <h2 class="section-title">Intelligent Productivity Analysis</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>Smart Time Tracking</h3>
+            <p>
+              AI automatically categorizes time spent on applications, websites,
+              and projects. Get detailed insights into productive vs.
+              non-productive activities with intelligent classification.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Engagement Analytics</h3>
+            <p>
+              Monitor employee engagement through keystroke patterns, mouse
+              movements, and application usage. Identify when team members are
+              most focused and productive.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Distraction Detection</h3>
+            <p>
+              Advanced AI algorithms identify potential distractions and
+              productivity killers. Receive alerts for excessive social media
+              use, non-work applications, or idle time.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+            <h3>Performance Optimization</h3>
+            <p>
+              Get personalized recommendations to boost individual and team
+              productivity. AI suggests optimal work schedules, break times, and
+              task prioritization.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Predictive Analytics</h3>
+            <p>
+              Forecast productivity trends and identify potential burnout before
+              it happens. Machine learning models analyze patterns to predict
+              performance fluctuations.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3>Custom Dashboards</h3>
+            <p>
+              Create personalized productivity dashboards with drag-and-drop
+              widgets. Visualize KPIs, goals, and progress in real-time with
+              interactive charts and graphs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Insights Section -->
+    <section class="ai-insights">
+      <div class="container">
+        <div class="insights-container">
+          <div class="insights-content">
+            <h2>AI-Powered Intelligence</h2>
+            <ul class="insights-list">
+              <li>
+                <strong>Machine Learning Models:</strong> Continuously learn
+                from employee behavior patterns to provide increasingly accurate
+                insights.
+              </li>
+              <li>
+                <strong>Natural Language Processing:</strong> Analyze
+                communication patterns in emails, chats, and documents to gauge
+                collaboration effectiveness.
+              </li>
+              <li>
+                <strong>Computer Vision:</strong> Optional facial recognition to
+                detect stress levels and engagement (with full consent and
+                privacy protection).
+              </li>
+              <li>
+                <strong>Behavioral Analytics:</strong> Identify optimal work
+                rhythms and suggest personalized productivity strategies.
+              </li>
+              <li>
+                <strong>Anomaly Detection:</strong> Automatically flag unusual
+                patterns that might indicate issues or opportunities.
+              </li>
+              <li>
+                <strong>Sentiment Analysis:</strong> Monitor team morale through
+                communication tone and frequency analysis.
+              </li>
+            </ul>
+          </div>
+          <div class="productivity-image">
+            <img
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Professional using laptop for productivity"
+            />
+            <div class="image-caption">
+              Modern workforce leveraging AI-powered productivity tools
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real-time Recommendations -->
+    <section class="realtime-section">
+      <div class="container">
+        <h2 class="section-title">⚡ Real-Time Recommendations</h2>
+        <div class="realtime-grid">
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Take a Break</h3>
+            <p>
+              AI detected 2.5 hours of continuous work. A 10-minute break could
+              boost your next session by 23%.
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Focus Mode</h3>
+            <p>
+              Entering deep work period. Notifications will be minimized for the
+              next 90 minutes to maximize concentration.
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Team Sync</h3>
+            <p>
+              Your team's productivity peaks at 10 AM. Schedule important
+              collaborations during this optimal window.
+            </p>
+          </div>
+          <div class="realtime-card">
+            <div class="pulse-dot"></div>
+            <h3>Goal Achievement</h3>
+            <p>
+              You're 15% ahead of your weekly productivity target. Consider
+              taking on that stretch project!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>35%</h3>
+            <p>Average Productivity Increase</p>
+          </div>
+          <div class="stat-item">
+            <h3>127</h3>
+            <p>AI Insights Generated Daily</p>
+          </div>
+          <div class="stat-item">
+            <h3>2.3x</h3>
+            <p>Faster Task Completion</p>
+          </div>
+          <div class="stat-item">
+            <h3>89%</h3>
+            <p>Employee Satisfaction Score</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Transform Your Workforce Today</h2>
+        <p>
+          Join over 5,000 companies using AI-powered productivity optimization
+          to unlock their team's full potential.
+        </p>
+        <button class="cta-button-sol" onclick="startTrial()">
+          Start Your Free AI Trial
+        </button>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <a href="index.html"
+              ><img
+                src="image/logo.png"
+                style="height: 80px; width: 100px" /></a
+            ><br /><br />
+            <p>Innovative monitoring solutions for the modern enterprise.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="feature1.html">AI Time Intelligence</a></li>
+              <li><a href="feature2.html">Smart Activity Radar</a></li>
+              <li><a href="feature3.html">AutoSnapshot AI</a></li>
+              <li><a href="feature4.html">Productivity Pulse</a></li>
+              <li><a href="feature5.html">ShiftGenie</a></li>
+              <li><a href="feature6.html">RemoteReady Monitoring</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>soutions</h3>
+            <ul>
+              <li><a href="solution1.html">Team Monitoring</a></li>
+              <li>
+                <a href="solution2.html">Workforce Productivity Optimization</a>
+              </li>
+              <li><a href="solution3.html">Remote Monitoring </a></li>
+              <li><a href="solution4.html">Time Tracking</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="client.html">Clients</a></li>
+              <li><a href="price.html">Price</a></li>
+              <li><a href="#">Blogs</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 ActionView. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="solutions.js"></script>
+  </body>
+</html>
