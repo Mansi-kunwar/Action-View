@@ -1093,7 +1093,7 @@ body {
       /* Responsive Design */
       @media (max-width: 768px) {
         .header h1 {
-          font-size: 1.1rem;
+          font-size: 1.5rem;
         }
 
         .header p{
@@ -1109,7 +1109,7 @@ body {
           grid-template-columns: 1fr;
         }
         .section-title {
-          font-size: 1.1rem;
+          font-size: 1.5rem;
         }
 
         .insights-content h2{
