@@ -1566,7 +1566,7 @@ body {
       /* Responsive Design */
       @media (max-width: 768px) {
         .header h1 {
-          font-size: 1.3rem;
+          font-size: 1.1rem;
         }
 
         .header p{
@@ -1576,17 +1576,17 @@ body {
           grid-template-columns: 1fr;
         }
         .feature-card h3{
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
         .features-grid {
           grid-template-columns: 1fr;
         }
         .section-title {
-          font-size: 1.3rem;
+          font-size: 1.1rem;
         }
 
         .insights-content h2{
-           font-size: 1.3rem;
+           font-size: 1.1rem;
         }
       }
 
