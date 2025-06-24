@@ -48,7 +48,7 @@
       }
 
       .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         line-height: 1.3;
         font-weight: 800;
         margin-bottom: 1.25rem;
@@ -56,7 +56,7 @@
       }
 
       .hero-text p {
-        font-size: clamp(1rem, 1.5vw, 1.1rem);
+        font-size: 1rem;
         margin-bottom: 2rem;
         color: #555;
       }
@@ -129,7 +129,7 @@
 
       .section-heading .highlight {
         color: #98cd00;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
 
       .features-container {
@@ -436,15 +436,23 @@
         .feature-content {
           padding-left: 2rem;
         }
-        .hero-text h1 {
-          font-size: 1.5rem;
-        }
       }
 
       @media (max-width: 480px) {
         .hero {
           padding: 2rem 5%;
           text-align: center;
+        }
+        .section-heading .highlight {
+          font-size: 1.2rem;
+        }
+
+        .section-heading {
+          font-size: 1.2rem;
+        }
+
+        .hero-text h1 {
+          font-size: 1.5rem;
         }
 
         .btn-group {
@@ -466,9 +474,7 @@
         .testimonial-card {
           flex: 0 0 85%;
         }
-        .hero-text h1 {
-          font-size: 1rem;
-        }
+
         .keyfeature h3 {
           font-size: 1rem;
         }
@@ -483,7 +489,9 @@
     <header class="navbar">
       <div class="logo-container">
         <div class="logo">
-          <img src="image/logo.png" alt="Mera Monitor Logo" />
+          <a href="index.html"
+            ><img src="image/logo.png" alt="Mera Monitor Logo"
+          /></a>
         </div>
         <span class="logo-text">Action View</span>
       </div>
@@ -558,7 +566,7 @@
 
     <section class="features-section_home">
       <h2 class="section-heading">
-        <span class="highlight">Key Features</span><br />
+        <span class="highlight">Key Features</span><br /><br />
         All-in-One Solution to Track, Manage, and Enhance Team Productivity
       </h2>
       <br />
@@ -662,6 +670,21 @@
             <div>
               <h4>Sarah L.</h4>
               <span>Project Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="quote">"</p>
+          <p class="testimonial-text">
+            Highly recommend for any distributed team. The productivity insights
+            are incredibly helpful.
+          </p>
+          <div class="testimonial-user">
+            <img src="https://i.pravatar.cc/60?img=2" alt="User photo" />
+            <div>
+              <h4>Dev M.</h4>
+              <span>Team Lead</span>
             </div>
           </div>
         </div>
