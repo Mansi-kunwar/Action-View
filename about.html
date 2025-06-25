@@ -10,13 +10,22 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
       .container {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
+      }
+      :root {
+        --primary: #98cd00; /* Vibrant green */
+        --primary-dark: #5a8f00; /* Dark green for contrast */
+        --secondary: #7ab800; /* Medium green */
+        --dark: #1a2e05; /* Very dark green for text */
+        --light: #f8fff0; /* Very light green for background */
+        --accent: #c1ff72; /* Light accent green */
+        --gray: #6b7d5e; /* Muted green-gray */
+        --light-gray: #e9f5d8; /* Light green-gray */
+        --card-shadow: 0 10px 30px rgba(152, 205, 0, 0.15);
       }
 
       /* Hero Section */
@@ -237,6 +246,47 @@
         font-size: 1.2rem;
         color: var(--dark);
         font-weight: 500;
+      }
+
+      .benefit-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .benefit-item {
+        background-color: var(--light-gray);
+        border-left: 5px solid var(--primary);
+        padding: 25px 20px 25px 25px;
+        border-radius: 10px;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .benefit-item:hover {
+        transform: translateY(-5px);
+        background-color: #f1fbe3;
+      }
+
+      .benefit-item i {
+        color: var(--primary-dark);
+        font-size: 1.8rem;
+        margin-right: 12px;
+        vertical-align: middle;
+      }
+
+      .benefit-item h4 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        color: var(--dark);
+      }
+
+      .benefit-item p {
+        font-size: 0.95rem;
+        color: var(--gray);
+        line-height: 1.6;
       }
 
       /* Animations */
@@ -495,31 +545,92 @@
 
     <section class="association">
       <div class="container">
-        <h2 class="section-title">Our Association with AAPNA Infotech</h2>
+        <h2 class="section-title">How Action View Empowers Your Company</h2>
+        <br /><br /><br />
         <div class="mv-card">
           <!--<img src="https://www.aapnainfotech.com/wp-content/uploads/2023/03/logo.svg" alt="AAPNA Infotech Logo" class="association-logo"/>-->
           <p>
-            MeraMonitor is proudly developed by AAPNA Infotech, a CMMi Level 3,
-            boutique software development and enterprise services organization
-            established in 2007. With over 15 years of experience, we have
-            evolved into an IT Commando Unit dedicated to delivering custom
-            software development and exceptional customer service.
+            In today’s dynamic and hybrid work environment, visibility and
+            accountability are key to staying competitive. Action View goes
+            beyond basic monitoring — it delivers powerful insights that help
+            you run a more productive, transparent, and efficient organization.
           </p>
-          <p>
-            Our commitment is driven by our unwavering passion, cost-effective
-            technology solutions, zero-waste methodology, and an outstanding
-            organizational culture.
-          </p>
-          <p>
-            For more information about AAPNA Infotech and our wide range of
-            Products & services, please visit our official website at
-            <a href="https://www.aapnainfotech.com" target="_blank"
-              >www.aapnainfotech.com</a
-            >.
-          </p>
-          <a href="https://www.aapnainfotech.com" target="_blank" class="btn"
+          <br />
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-chart-line"></i> Enhance Team Productivity
+              </h4>
+              <p>
+                Track time spent on tasks and tools, identify top performers,
+                and keep teams aligned with goals.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-eye"></i> Ensure Operational Transparency
+              </h4>
+              <p>
+                Live activity insights let managers support teams without
+                micromanaging, creating trust through clarity.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-users-cog"></i> Support Remote & Hybrid Teams
+              </h4>
+              <p>
+                Monitor distributed teams effortlessly, regardless of location —
+                maintain accountability across the board.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-brain"></i> Drive Smarter Decision-Making
+              </h4>
+              <p>
+                Leverage data-rich reports to optimize workflows, reduce
+                downtime, and plan resource allocation intelligently.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-file-alt"></i> Improve Compliance &
+                Recordkeeping
+              </h4>
+              <p>
+                Automatically log time, breaks, and overtime in accordance with
+                HR policies and labor regulations.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <h4><i class="fas fa-recycle"></i> Reduce Wasted Resources</h4>
+              <p>
+                Spot inefficiencies and eliminate unproductive habits that cost
+                time and money.
+              </p>
+            </div>
+
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-user-check"></i> Build a Culture of
+                Accountability
+              </h4>
+              <p>
+                Encourage responsibility and focus through fair, non-intrusive
+                monitoring and transparent metrics.
+              </p>
+            </div>
+          </div>
+
+          <!-- <a href="https://www.aapnainfotech.com" target="_blank" class="btn"
             >Visit AAPNA Infotech</a
-          >
+          > -->
         </div>
       </div>
     </section>
@@ -530,29 +641,32 @@
         <div class="inception-content">
           <div class="inception-text">
             <p>
-              "MeraMonitor," the brainchild of AAPNA Infotech, was born out of
-              the necessity imposed by the COVID-19 pandemic. With the world
-              shifting towards remote work, our visionary CEO, Abhijit Roy,
-              recognized the need for a tool to ensure the productivity and
-              efficiency of remote teams.
+              The idea for Action View was born out of a real-world challenge —
+              bridging the gap between trust and transparency in modern
+              workplaces. As businesses increasingly embraced remote and hybrid
+              work models, managers struggled to maintain visibility into team
+              productivity without resorting to invasive practices. We saw a
+              clear need for a smarter solution.
             </p>
             <p>
-              After evaluating existing time tracking software, which often
-              proved costly and fell short of our expectations, our skilled IT
-              Commando team embarked on a journey to develop a superior
-              application.
+              Our founding team, with backgrounds in enterprise software, human
+              resource management, and cybersecurity, came together with a
+              shared vision that was to create an intelligent, ethical, and
+              intuitive platform that empowers both employers and employees.
             </p>
             <p>
-              Today, we proudly announce that "MeraMonitor" is LIVE. This
-              AI-driven tool, shaped by the dedication of over 200 Commandos and
-              valued partners, surpasses all competition. Its name,
-              "MeraMonitor," reflects its dual commitment to enhancing both
-              employee and organizational productivity.
+              From day one, Action View was designed to go beyond traditional
+              employee monitoring. Instead of surveillance, we focused on
+              insight — giving organizations the tools to make data-driven
+              decisions, improve accountability, and support productivity in a
+              respectful, non-intrusive manner.
             </p>
             <p>
-              As we continue to navigate the evolving landscape of work,
-              "MeraMonitor" stands as a testament to innovation and
-              adaptability.
+              What started as a simple time-tracking tool has evolved into a
+              comprehensive productivity suite trusted by teams across
+              industries. With every update and new feature, we stay true to our
+              original mission: To redefine workforce monitoring with
+              transparency, simplicity, and purpose.
             </p>
           </div>
           <div class="inception-image">
@@ -609,7 +723,7 @@
 
     <section class="stats">
       <div class="container">
-        <h2 class="section-title">MeraMonitor By Numbers</h2>
+        <h2 class="section-title">Action View By Numbers</h2>
         <div class="stats-container">
           <div class="stat-item">
             <div class="stat-number">15+</div>
