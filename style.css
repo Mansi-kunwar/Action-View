@@ -291,6 +291,10 @@ body {
             font-size: 18px;
         }
 
+        .footer-column p{
+          color:var(--light-gray);
+        }
+
         .footer-column ul {
             list-style: none;
         }
@@ -830,7 +834,6 @@ body {
         font-size: 2rem;
         margin-bottom: 1rem;
         font-weight: 700;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
       .header p {
