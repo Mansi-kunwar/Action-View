@@ -38,7 +38,6 @@
         overflow: hidden;
       }
 
-     
       .hero::before {
         content: "";
         position: absolute;
@@ -49,7 +48,6 @@
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
         animation: float 20s infinite linear;
       }
-
 
       .hero h1 {
         font-size: 2rem;
@@ -446,169 +444,168 @@
           width: 100%;
         }
       }
-      
-     /* Leadership Team Styles */
-.leadership-team {
-  padding: 80px 0 100px;
-  background-color: var(--light);
-}
 
-.team-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--dark);
-  max-width: 700px;
-  margin: 0 auto 40px;
-}
+      /* Leadership Team Styles */
+      .leadership-team {
+        padding: 80px 0 100px;
+        background-color: var(--light);
+      }
 
-.team-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+      .team-subtitle {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--dark);
+        max-width: 700px;
+        margin: 0 auto 40px;
+      }
 
-.team-card {
-  background: white;
-  border-radius: 12px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: var(--card-shadow);
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-}
+      .team-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
 
-.team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(152, 205, 0, 0.2);
-}
+      .team-card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px 20px;
+        text-align: center;
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s ease;
+        box-sizing: border-box;
+      }
 
-.team-img-container {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 15px;
-  border: 4px solid var(--light-gray);
-}
+      .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(152, 205, 0, 0.2);
+      }
 
-.team-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+      .team-img-container {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 15px;
+        border: 4px solid var(--light-gray);
+      }
 
-.team-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-  color: var(--dark);
-}
+      .team-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-.team-title {
-  color: var(--primary);
-  font-weight: 600;
-  margin-bottom: 12px;
-  font-size: 0.85rem;
-}
+      .team-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: var(--dark);
+      }
 
-.team-bio {
-  color: var(--gray);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  min-height: 70px;
-}
+      .team-title {
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+      }
 
-.team-link {
-  color: var(--primary-dark);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
+      .team-bio {
+        color: var(--gray);
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        min-height: 70px;
+      }
 
-/* Responsive styles */
-@media (max-width: 767px) {
-  .leadership-team {
-    padding: 60px 0;
-  }
+      .team-link {
+        color: var(--primary-dark);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
 
-  .team-subtitle {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    padding: 0 15px;
-  }
+      /* Responsive styles */
+      @media (max-width: 767px) {
+        .leadership-team {
+          padding: 60px 0;
+        }
 
-  .team-card {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    padding: 20px 15px;
-  }
+        .team-subtitle {
+          font-size: 1rem;
+          margin-bottom: 30px;
+          padding: 0 15px;
+        }
 
-  .team-img-container {
-    width: 80px;
-    height: 80px;
-    border-width: 3px;
-  }
+        .team-card {
+          width: 100%;
+          max-width: 100%;
+          margin-bottom: 20px;
+          padding: 20px 15px;
+        }
 
-  .team-card h3 {
-    font-size: 1.1rem;
-  }
+        .team-img-container {
+          width: 80px;
+          height: 80px;
+          border-width: 3px;
+        }
 
-  .team-bio {
-    font-size: 0.8rem;
-    min-height: 60px;
-  }
+        .team-card h3 {
+          font-size: 1.1rem;
+        }
 
-  .team-wrapper {
-    padding: 0 15px;
-  }
-}
+        .team-bio {
+          font-size: 0.8rem;
+          min-height: 60px;
+        }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .team-card {
-    width: 100%;
-    max-width: 100%;
-  }
+        .team-wrapper {
+          padding: 0 15px;
+        }
+      }
 
-  .team-img-container {
-    width: 90px;
-    height: 90px;
-  }
-}
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .team-card {
+          width: 100%;
+          max-width: 100%;
+        }
 
-@media (min-width: 1024px) {
-  .team-card {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    padding: 30px 25px;
-  }
+        .team-img-container {
+          width: 90px;
+          height: 90px;
+        }
+      }
 
-  .team-img-container {
-    width: 110px;
-    height: 110px;
-  }
+      @media (min-width: 1024px) {
+        .team-card {
+          flex: 1 1 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+          padding: 30px 25px;
+        }
 
-  .team-card h3 {
-    font-size: 1.3rem;
-  }
+        .team-img-container {
+          width: 110px;
+          height: 110px;
+        }
 
-  .team-title {
-    font-size: 1rem;
-  }
+        .team-card h3 {
+          font-size: 1.3rem;
+        }
 
-  .team-bio {
-    font-size: 0.9rem;
-    min-height: 80px;
-  }
+        .team-title {
+          font-size: 1rem;
+        }
 
-  .team-link {
-    font-size: 0.9rem;
-  }
-}
+        .team-bio {
+          font-size: 0.9rem;
+          min-height: 80px;
+        }
 
+        .team-link {
+          font-size: 0.9rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -657,7 +654,7 @@
           <a href="#">Explore And Learn</a>
           <div class="dropdown-content">
             <a href="about.html">About Us</a>
-            <a href="#">Blog</a>
+            <!-- <a href="#">Blog</a> -->
             <a href="contact.html">Contact Us</a>
           </div>
         </div>
@@ -666,12 +663,10 @@
     </header>
     <!-- navbar -->
 
-    <section class="hero ">
+    <section class="hero">
       <div class="container">
         <h1>About Action View</h1>
-        <p>
-          AI-powered productivity monitoring solution 
-        </p>
+        <p>AI-powered productivity monitoring solution</p>
       </div>
     </section>
 
@@ -705,39 +700,53 @@
       </div>
     </section>
 
-<!-- Leadership Team Section -->
-<section class="leadership-team">
-  <div class="container">
-    <h2 class="section-title">Our Leadership Team</h2>
-    <p class="team-subtitle">
-      The visionary minds driving Action View's innovation
-    </p>
+    <!-- Leadership Team Section -->
+    <section class="leadership-team">
+      <div class="container">
+        <h2 class="section-title">Our Leadership Team</h2>
+        <p class="team-subtitle">
+          The visionary minds driving Action View's innovation
+        </p>
 
-    <div class="team-wrapper">
-      <!-- Team Member 1 -->
-      <div class="team-card">
-        <div class="team-img-container">
-          <img src="image/pfp1.jpg" alt="Jasmeet Singh Bajaj" class="team-img">
-        </div>
-        <h3>Jasmeet Singh Bajaj</h3>
-        <p class="team-title">Director & Co-Founder</p>
-        <!-- <p class="team-bio">Technology entrepreneur with 15+ years experience building enterprise SaaS solutions.</p> -->
-        <a href="https://www.linkedin.com/in/jasmeetsbajaj/" class="team-link" target="_blank">View Profile →</a>
-      </div>
+        <div class="team-wrapper">
+          <!-- Team Member 1 -->
+          <div class="team-card">
+            <div class="team-img-container">
+              <img
+                src="image/pfp1.jpg"
+                alt="Jasmeet Singh Bajaj"
+                class="team-img"
+              />
+            </div>
+            <h3>Jasmeet Singh Bajaj</h3>
+            <p class="team-title">Director & Co-Founder</p>
+            <!-- <p class="team-bio">Technology entrepreneur with 15+ years experience building enterprise SaaS solutions.</p> -->
+            <a
+              href="https://www.linkedin.com/in/jasmeetsbajaj/"
+              class="team-link"
+              target="_blank"
+              >View Profile →</a
+            >
+          </div>
 
-      <!-- Team Member 2 -->
-      <div class="team-card">
-        <div class="team-img-container">
-          <img src="image/pfp2.jpg" alt="Dheeraj Gupta" class="team-img">
+          <!-- Team Member 2 -->
+          <div class="team-card">
+            <div class="team-img-container">
+              <img src="image/pfp2.jpg" alt="Dheeraj Gupta" class="team-img" />
+            </div>
+            <h3>Dheeraj Gupta</h3>
+            <p class="team-title">Director</p>
+            <!-- <p class="team-bio">AI/ML expert leading our product development with a focus on ethical monitoring.</p> -->
+            <a
+              href="https://www.linkedin.com/in/dheerajguptamieux/"
+              class="team-link"
+              target="_blank"
+              >View Profile →</a
+            >
+          </div>
         </div>
-        <h3>Dheeraj Gupta</h3>
-        <p class="team-title">Director </p>
-        <!-- <p class="team-bio">AI/ML expert leading our product development with a focus on ethical monitoring.</p> -->
-        <a href="https://www.linkedin.com/in/dheerajguptamieux/" class="team-link" target="_blank">View Profile →</a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section class="association">
       <div class="container">
@@ -752,97 +761,99 @@
             you run a more productive, transparent, and efficient organization.
           </p>
           <br />
-         <div class="benefit-list">
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-chart-line"></i> Enhance Team Productivity
-        </h4>
-        <p>
-            Track time spent on tasks and tools, identify top performers,
-            and keep teams aligned with goals.
-        </p>
-    </div>
+          <div class="benefit-list">
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-chart-line"></i> Enhance Team Productivity
+              </h4>
+              <p>
+                Track time spent on tasks and tools, identify top performers,
+                and keep teams aligned with goals.
+              </p>
+            </div>
 
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-eye"></i> Ensure Operational Transparency
-        </h4>
-        <p>
-            Live activity insights let managers support teams without
-            micromanaging, creating trust through clarity.
-        </p>
-    </div>
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-eye"></i> Ensure Operational Transparency
+              </h4>
+              <p>
+                Live activity insights let managers support teams without
+                micromanaging, creating trust through clarity.
+              </p>
+            </div>
 
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-users-cog"></i> Support Remote & Hybrid Teams
-        </h4>
-        <p>
-            Monitor distributed teams effortlessly, regardless of location —
-            maintain accountability across the board.
-        </p>
-    </div>
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-users-cog"></i> Support Remote & Hybrid Teams
+              </h4>
+              <p>
+                Monitor distributed teams effortlessly, regardless of location —
+                maintain accountability across the board.
+              </p>
+            </div>
 
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-brain"></i> Drive Smarter Decision-Making
-        </h4>
-        <p>
-            Leverage data-rich reports to optimize workflows, reduce
-            downtime, and plan resource allocation intelligently.
-        </p>
-    </div>
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-brain"></i> Drive Smarter Decision-Making
+              </h4>
+              <p>
+                Leverage data-rich reports to optimize workflows, reduce
+                downtime, and plan resource allocation intelligently.
+              </p>
+            </div>
 
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-file-alt"></i> Improve Compliance & Recordkeeping
-        </h4>
-        <p>
-            Automatically log time, breaks, and overtime in accordance with
-            HR policies and labor regulations.
-        </p>
-    </div>
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-file-alt"></i> Improve Compliance &
+                Recordkeeping
+              </h4>
+              <p>
+                Automatically log time, breaks, and overtime in accordance with
+                HR policies and labor regulations.
+              </p>
+            </div>
 
-    <div class="benefit-item">
-        <h4><i class="fas fa-recycle"></i> Reduce Wasted Resources</h4>
-        <p>
-            Spot inefficiencies and eliminate unproductive habits that cost
-            time and money.
-        </p>
-    </div>
+            <div class="benefit-item">
+              <h4><i class="fas fa-recycle"></i> Reduce Wasted Resources</h4>
+              <p>
+                Spot inefficiencies and eliminate unproductive habits that cost
+                time and money.
+              </p>
+            </div>
 
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-user-check"></i> Build a Culture of Accountability
-        </h4>
-        <p>
-            Encourage responsibility and focus through fair, non-intrusive
-            monitoring and transparent metrics.
-        </p>
-    </div>
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-user-check"></i> Build a Culture of
+                Accountability
+              </h4>
+              <p>
+                Encourage responsibility and focus through fair, non-intrusive
+                monitoring and transparent metrics.
+              </p>
+            </div>
 
-    <!-- New Benefit 1 -->
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-shield-alt"></i> Strengthen Data Security
-        </h4>
-        <p>
-            Monitor application usage to prevent unauthorized access and protect
-            sensitive company information.
-        </p>
-    </div>
+            <!-- New Benefit 1 -->
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-shield-alt"></i> Strengthen Data Security
+              </h4>
+              <p>
+                Monitor application usage to prevent unauthorized access and
+                protect sensitive company information.
+              </p>
+            </div>
 
-    <!-- New Benefit 2 -->
-    <div class="benefit-item">
-        <h4>
-            <i class="fas fa-lightbulb"></i> Foster Continuous Improvement
-        </h4>
-        <p>
-            Identify training opportunities and skill gaps through detailed
-            activity analysis and performance trends.
-        </p>
-    </div>
-</div>
+            <!-- New Benefit 2 -->
+            <div class="benefit-item">
+              <h4>
+                <i class="fas fa-lightbulb"></i> Foster Continuous Improvement
+              </h4>
+              <p>
+                Identify training opportunities and skill gaps through detailed
+                activity analysis and performance trends.
+              </p>
+            </div>
+          </div>
 
           <!-- <a href="https://www.aapnainfotech.com" target="_blank" class="btn"
             >Visit AAPNA Infotech</a
@@ -886,10 +897,7 @@
             </p>
           </div>
           <div class="inception-image">
-            <img
-              src="image/our_inception.avif"
-              alt="Remote work team"
-            />
+            <img src="image/our_inception.avif" alt="Remote work team" />
           </div>
         </div>
       </div>
@@ -1000,9 +1008,10 @@
               <li><a href="about.html">About Us</a></li>
               <li><a href="client.html">Clients</a></li>
               <li><a href="price.html">Price</a></li>
-              <li><a href="#">Blogs</a></li>
+              <!-- <li><a href="#">Blogs</a></li> -->
             </ul>
           </div>
+        </div>
         <div class="footer-bottom">
           <p>&copy; 2025 ActionView. All rights reserved.</p>
         </div>
